@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Complaint</title>
+    <script src="pay.js"></script>
+</head>
+<body>
+    <div class="header"><h2>MnH Bills and Services</h2></div>
+    
+        <nav id="navbar">
+            <a class="navelement" href="home.html">Home</a> 
+            <a class="navelement" href="paybill.html">Pay Bill</a>    
+            <a class="navelement" href="RegisterComplaint.html">Register Complaint</a>
+            <a class="navelement" href="ComplaintStatus.html">Complaint Status</a>
+                </nav>
+        <div class="line3">
+            <p id="cxname"></p>
+            <button id="logbtn" onclick="goLogin()">Logout</button>
+
+        </div>
+
+        
+        <div class="completepaymentmain">
+
+            <h2>Bill Payment</h2>
+            <div id="credentials">
+
+                <table border="1">
+                    <thead>
+
+                        <tr>
+                            <th>Bill Details</th>
+                            <th>Charges</th>
+                        </tr>
+
+                    </thead>
+
+                    <tr>
+                        <td>Bill Amount</td>
+                        <td class="amount"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Total Payable Amount</td>
+                        <td class="amount"></td>
+                    </tr>
+
+                    <tr>
+                        <td>PG Charges</td>
+                        <td>As per applicable</td>
+                    </tr>
+
+                </table>
+
+                <h3 id="finalamount"></h3>
+                
+            </div>
+
+                <br>
+            <div class="selectmode">
+                
+            <h4>Select Mode of Payement</h4>
+            
+            
+            <input type="radio" value="Debit Card" name="card" id="radio1">
+            <label>Debit Card</label>
+            
+            <input type="radio" value="Credit Card" name="card" id="radio2">
+            <label>Credit Card</label>
+            <script>
+               document.addEventListener("DOMContentLoaded", function() {
+                pricedetails();
+        });
+            </script>
+
+                <button onclick="cardselection()">Pay Now</button>
+                <button onclick="gohome()">Back to Home</button>
+
+                
+        </div>
+            
+        
+        
+        </div>
+    
+</body>
+<style>
+    .header{
+        margin-left: 25px;
+        margin-top: 30px;
+        
+    }
+    #logbtn{
+        align-items: right;
+        color:black;
+        font-size: 15px;
+        font-style: italic;
+        font-weight: bold;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        background-color: crimson;
+        border-radius: 20px;
+        margin:5px 5px;
+        margin-left: 15px;
+        margin-right: 20px;
+        padding: 5px 5px;
+        cursor: pointer;
+        text-shadow: 10px;
+        text-align: center;
+    }
+    .line3{
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        justify-content:flex-end;
+        align-items: right; 
+        
+    }
+    #navbar{
+        justify-content: space-between;
+        font-size: 18px;
+        text-align: right;
+        margin: 10px;
+    }
+    .navelement{
+        margin:20px;
+    }
+</style>
+<script>
+    getusername();
+</script>
+
+
+</html>

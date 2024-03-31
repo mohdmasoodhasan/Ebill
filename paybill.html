@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Payment</title>
+    <script src="pay.js"></script>
+</head>
+<body>
+    <div class="header"><h2>MnH Bills and Services</h2></div>
+    
+        <nav id="navbar">
+            <a class="navelement" href="home.html">Home</a> 
+            <a class="navelement" href="paybill.html">Pay Bill</a>    
+            <a class="navelement" href="RegisterComplaint.html">Register Complaint</a>
+            <a class="navelement" href="ComplaintStatus.html">Complaint Status</a>
+                </nav>
+        <div class="line3">
+            <p id="cxname"></p>
+            <button id="logbtn" onclick="goLogin()">Logout</button>
+        </div>
+
+        <div class="viewcenter">
+            <h3>View and Pay Bills</h3>
+
+            <table border="1" >
+                <thead>
+
+                    <tr>
+                        <th>Consumer Number</th>
+                        <th>Select</th>
+                        <th>Due Amout(Rs)</th>
+                        <th class="payable">Payable(Rs)</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td id="consNum1"></td>
+                    <td><input type="checkbox" id="checkbox1"></td>
+                    <td id="DueAmount1"></td>
+                    <td id="pay1" class="payable"></td>
+                </tr>
+                <tr>
+                    <td id="consNum2"></td>
+                    <td><input type="checkbox" id="checkbox2"></td>
+                    <td id="DueAmount2"></td>
+                    <td id="pay2" class="payable"></td>
+                </tr>
+                <tr>
+                    <td id="consNum3"></td>
+                    <td><input type="checkbox" id="checkbox3"></td>
+                    <td id="DueAmount3"></td>
+                    <td id="pay3" class="payable"></td>
+                </tr>
+ 
+                
+            </table>
+            <h3 id="TotalPayable">TotalPayable: 0</h3>
+            <script>tabledata();</script>
+
+            <button id="paybtn" onclick="gopay()">Proceed to pay</button>
+        </div>
+
+
+        <style>
+            table {
+                width: 50%; 
+                border-collapse: collapse; 
+            }
+            th, td {
+                border: 1px solid black; 
+                padding: 8px; 
+                text-align: left; 
+            }
+            tr {
+                height: 50px; 
+            }
+        </style>
+    
+</body>
+<style>
+    .header{
+        margin-left: 25px;
+        margin-top: 30px;
+        
+    }
+    #logbtn{
+        align-items: right;
+        color:black;
+        font-size: 15px;
+        font-style: italic;
+        font-weight: bold;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        background-color: crimson;
+        border-radius: 20px;
+        margin:5px 5px;
+        margin-left: 15px;
+        margin-right: 20px;
+        padding: 5px 5px;
+        cursor: pointer;
+        text-shadow: 10px;
+        text-align: center;
+    }
+    .line3{
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        justify-content:flex-end;
+        align-items: right; 
+        
+    }
+    #navbar{
+        justify-content: space-between;
+        font-size: 18px;
+        text-align: right;
+        margin: 10px;
+    }
+    .navelement{
+        margin:20px;
+    }
+</style>
+<script>
+    getusername();
+</script>
+
+
+</html>

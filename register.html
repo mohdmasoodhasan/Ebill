@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <script src="Login.js"></script>
+    
+</head>
+<body>
+    <div>
+    <form  id="myForm" action="Confirmregister.html">
+    <h1>Register New User</h1>
+    <hr>
+    <h2>Consumer Details</h2>
+    <hr>
+    <label > Consumer Number:</label>
+    <input type="text" name="ConsNo" maxlength="13">
+    <label > Bill Number:</label>
+    <input type="text" name="BillNo"   maxlength="5">
+    <br>
+    <hr>
+    <h2>Customer Details</h2>
+    <label >Title</label>
+    <select name="Title" id="Title">
+        <option value="Mr">Mr</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Miss">Miss</option>
+    </select>
+    <label>Customer Name:</label>
+    <input type="text" name="CusName" maxlength="50">
+    <br>
+    <label >Email</label>
+    <input type="Email" name="Email">
+    <br>
+    <label >Mobile Number</label>
+    <select name="CountryCode" id="CountryCode">
+        <option value="IND">+91</option>
+        <option value="AFG">+93</option>
+        <option value="CAN">+1</option>
+        <option value="MYS">+60</option>
+    </select>
+    <input type="number" name="MobNo" >
+    <br>
+    <h2>Login Details</h2>
+    <hr>
+    <label >User ID:</label>
+    <input type="text" name="UserID" id="UserID" minlength="5" maxlength="20" required>
+    <label >Password</label>
+    <input type="password" name="Password" id="Password" required>
+
+    <label >Confirm Password</label>
+    <input type="password" name="Confirm-password" id="Confirm-password" required>
+
+    <br>
+    <button type="reset">Reset</button>
+    <input type='submit' value='Submit' >
+
+
+</form>
+
+    
+
+    </div>
+
+</body>
+</html>
